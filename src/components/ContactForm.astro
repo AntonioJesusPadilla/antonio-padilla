@@ -1,0 +1,59 @@
+---
+import { Icon } from '@iconify/react';
+
+// Configuración para Formspree
+const formspreeEndpoint = 'https://formspree.io/f/your-form-id'; // Reemplazar con tu ID
+---
+
+<section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-12 text-center">Contacto</h2>
+    
+    <form 
+      class="max-w-lg mx-auto" 
+      action={formspreeEndpoint} 
+      method="POST"
+    >
+      <div class="mb-6">
+        <label for="name" class="block mb-2">Nombre</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
+        />
+      </div>
+      
+      <div class="mb-6">
+        <label for="email" class="block mb-2">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
+        />
+      </div>
+      
+      <div class="mb-6">
+        <label for="message" class="block mb-2">Mensaje</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
+        ></textarea>
+      </div>
+      
+      <button
+        type="submit"
+        class="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded transition-colors flex items-center gap-2"
+      >
+        <Icon icon="mdi:send" class="w-5 h-5" />
+        Enviar Mensaje
+      </button>
+    </form>
+  </div>
+</section>

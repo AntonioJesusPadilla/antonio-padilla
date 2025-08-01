@@ -1,0 +1,23 @@
+---
+import { getGitHubProjects } from '../utils/github-projects';
+import ProjectCard from './ProjectCard.astro';
+
+const username = 'tu-usuario-github'; // Cambiar por tu usuario
+const projects = await getGitHubProjects(username);
+---
+
+<section id="projects" class="py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-12 text-center">Mis Proyectos</h2>
+    
+    {projects.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map(project => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    ) : (
+      <p class="text-center">No se encontraron proyectos públicos</p>
+    )}
+  </div>
+</section>

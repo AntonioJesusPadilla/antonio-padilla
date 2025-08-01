@@ -1,21 +1,62 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import projects from '../data/projects.json';
+import { profile } from '../data/profile';
 ---
 
-<BaseLayout title="Portfolio profesional">
-  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold mb-6">Hola, soy [Tu Nombre]</h1>
-      <p class="text-xl mb-8">Desarrollador especializado en...</p>
-      
-      <h2 id="projects" class="text-2xl font-bold mb-6">Proyectos destacados</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map(project => (
-          <ProjectCard project={project} />
-        ))}
+<BaseLayout title={`${profile.name} | Portfolio`}>
+  <section class="py-20">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/3 flex justify-center">
+        <img 
+          src={profile.image} 
+          alt={profile.name}
+          width="300"
+          height="300"
+          class="rounded-full w-64 h-64 object-cover border-4 border-primary-500"
+        />
+      </div>
+      <div class="md:w-2/3">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">{profile.name}</h1>
+        <h2 class="text-2xl md:text-3xl text-primary-600 dark:text-primary-400 mb-6">
+          {profile.title}
+        </h2>
+        <p class="text-lg mb-8 max-w-2xl">{profile.description}</p>
+        
+        <div class="flex gap-4">
+          {profile.socialLinks.map((social) => (
+            <a 
+              href={social.url} 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              aria-label={social.name}
+            >
+              <Icon icon={social.icon} class="w-6 h-6" />
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </section>
+
+  <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center">Sobre mí</h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="whitespace-pre-line mb-8">{profile.about}</p>
+        
+        <h3 class="text-xl font-semibold mb-4">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          {profile.skills.map(skill => (
+            <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de proyectos se añadirá aquí -->
+  <!-- Sección de contacto se añadirá aquí -->
 </BaseLayout>
