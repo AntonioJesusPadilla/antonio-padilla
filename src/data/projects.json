@@ -1,9 +1,16 @@
 [
   {
-    "title": "Portfolio Astro",
-    "description": "Portfolio profesional construido con Astro",
-    "tags": ["web", "astro", "tailwind"],
-    "image": "/project-placeholder.jpg",
-    "link": "https://github.com/tu-usuario/tu-repo"
+    "title": "Proyecto Ejemplo",
+    "description": "Descripción breve del proyecto y tecnologías usadas",
+    "tags": ["web", "astro", "react"],
+    "image": "/placeholder-project.jpg",
+    "link": "https://ejemplo.com"
+  },
+  {
+    "title": "Otro Proyecto",
+    "description": "Otra descripción de proyecto interesante",
+    "tags": ["mobile", "flutter"],
+    "image": "/placeholder-project.jpg",
+    "link": "https://otro-ejemplo.com"
   }
 ]
