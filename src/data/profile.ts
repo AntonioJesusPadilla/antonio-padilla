@@ -22,7 +22,7 @@ export const profile: ProfileData = {
   socialLinks: [
     { name: 'GitHub', url: 'https://github.com/AntonioJesusPadilla', icon: 'github' },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/antoniojesuspadilla', icon: 'linkedin' },
-    { name: 'Email', url: 'mailto:antoniojesuspadilla@email.com', icon: 'email' }
+    { name: 'Email', url: 'mailto:antoniojesuspadilla.dev@proton.me', icon: 'email' }
   ],
   about: `Soy desarrollador full-stack especializado en crear soluciones completas que integran inteligencia artificial, automatización avanzada y experiencias de usuario excepcionales.
 
