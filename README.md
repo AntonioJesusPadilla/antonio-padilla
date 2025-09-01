@@ -86,7 +86,7 @@ Con experiencia en desarrollo de asistentes de IA, interfaces de chat responsive
 ## 📫 Contacto
 
 - 🌐 **Portfolio**: [Este sitio web](https://portfolio-antonio-padilla.vercel.app)
-- 📧 **Email**: [antoniojesuspadilla@email.com](mailto:antoniojesuspadilla@email.com)
+- 📧 **Email**: [antoniojesuspadilla.dev@proton.me](mailto:antoniojesuspadilla.dev@proton.me)
 - 💼 **LinkedIn**: [linkedin.com/in/antoniojesuspadilla](https://linkedin.com/in/antoniojesuspadilla)
 - 🐙 **GitHub**: [AntonioJesusPadilla](https://github.com/AntonioJesusPadilla)
 
