@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { fetchProjectsFromNotion } from '../lib/notion';
+import { profile } from '../data/profile';
+
+const projects = await fetchProjectsFromNotion();
+---
+
+<BaseLayout title={`Proyectos | ${profile.name}`}>
+  <section class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="container text-sm text-gray-600 dark:text-gray-400">
+      <a href="/" class="hover:text-primary-600">Inicio</a>
+      <span class="mx-2">/</span>
+      <span>Proyectos</span>
+    </div>
+  </section>
+
+  <section id="projects" class="py-12 bg-white dark:bg-gray-900">
+    <div class="container">
+      <h1 class="text-3xl font-bold mb-12 text-gray-900 dark:text-white">Proyectos (desde Notion)</h1>
+      {projects.length > 0 ? (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((p) => (
+            <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+              <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{p.name}</h3>
+              {p.description && (<p class="text-gray-600 dark:text-gray-400 mb-4">{p.description}</p>)}
+              <div class="flex gap-2 flex-wrap mb-4">
+                {p.tags.map(tag => (
+                  <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">{tag}</span>
+                ))}
+              </div>
+              {p.url && (
+                <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:underline">Ver proyecto</a>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Aún sin datos de Notion</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Añade NOTION_TOKEN y NOTION_PROJECTS_DB_ID para mostrar tus proyectos.</p>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

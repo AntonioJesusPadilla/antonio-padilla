@@ -1,16 +1,50 @@
 [
   {
-    "title": "Proyecto Ejemplo",
-    "description": "Descripción breve del proyecto y tecnologías usadas",
-    "tags": ["web", "astro", "react"],
-    "image": "/placeholder-project.jpg",
-    "link": "https://ejemplo.com"
+    "title": "Jarvis - Asistente de Investigación IA",
+    "description": "Asistente de investigación inteligente con interfaz de chat responsive, toggle de temas y procesamiento de IA. Sistema completo con frontend Next.js, backend FastAPI y automatización con n8n.",
+    "tags": ["Next.js", "TypeScript", "FastAPI", "Python", "n8n", "Docker", "IA", "Tailwind CSS"],
+    "image": "/screenshots/jarvis-demo.jpg",
+    "link": "https://github.com/AntonioJesusPadilla/jarvis",
+    "demo": "http://localhost:3000",
+    "features": [
+      "Interface de chat responsive con toggle de temas",
+      "Backend FastAPI con documentación automática",
+      "Automatización con n8n workflows",
+      "Integración con servicios de IA y búsqueda web",
+      "Containerización completa con Docker",
+      "Gestión de sesiones y contexto de chat"
+    ]
   },
   {
-    "title": "Otro Proyecto",
-    "description": "Otra descripción de proyecto interesante",
-    "tags": ["mobile", "flutter"],
-    "image": "/placeholder-project.jpg",
-    "link": "https://otro-ejemplo.com"
+    "title": "FactuAI - Pipeline de Procesamiento de Facturas",
+    "description": "Pipeline inteligente para procesamiento automático de facturas con extracción de texto (OCR), identificación de campos mediante IA, almacenamiento en SQLite y dashboard de Power BI.",
+    "tags": ["Python", "OpenAI", "Power BI", "OCR", "SQLite", "IA", "Tesseract", "Pandas"],
+    "image": "/screenshots/factuai-demo.jpg",
+    "link": "https://github.com/AntonioJesusPadilla/factuAI",
+    "features": [
+      "Extracción de texto de PDFs e imágenes con OCR (Tesseract)",
+      "Identificación de campos con OpenAI GPT-4",
+      "Sistema heurístico robusto como fallback",
+      "Soporte multilingüe (español, inglés, francés, alemán)",
+      "Conversión automática de monedas a EUR",
+      "Dashboard interactivo de Power BI",
+      "Almacenamiento optimizado en SQLite",
+      "Procesamiento en lotes para grandes volúmenes"
+    ]
+  },
+  {
+    "title": "Portfolio Personal",
+    "description": "Portfolio personal desarrollado con Astro, React y Tailwind CSS. Diseño moderno y responsive con integración de datos dinámicos y optimización SEO.",
+    "tags": ["Astro", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    "image": "/screenshots/portfolio-demo.jpg",
+    "link": "https://github.com/AntonioJesusPadilla/portfolio-antonio-padilla",
+    "demo": "https://portfolio-antonio-padilla.vercel.app",
+    "features": [
+      "Diseño responsive y moderno",
+      "Integración con Notion API",
+      "Optimización SEO y rendimiento",
+      "Tema oscuro/claro personalizable",
+      "Deploy automático con Vercel"
+    ]
   }
 ]
