@@ -62,7 +62,7 @@ Con experiencia en desarrollo de asistentes de IA, interfaces de chat responsive
 - 💱 Conversión automática de monedas a EUR
 - 📊 Dashboard interactivo de Power BI completamente funcional
 
-### 🌐 [Portfolio Personal](https://github.com/AntonioJesusPadilla/portfolio-antonio-padilla)
+### 🌐 [Portfolio Personal](https://github.com/AntonioJesusPadilla/antonio-padilla)
 **Stack:** Astro, React, TypeScript, Tailwind CSS, Vercel
 > Portfolio personal desarrollado con Astro y React. Diseño moderno y responsive con integración de datos dinámicos, optimización SEO y tema oscuro/claro personalizable.
 
@@ -85,7 +85,7 @@ Con experiencia en desarrollo de asistentes de IA, interfaces de chat responsive
 
 ## 📫 Contacto
 
-- 🌐 **Portfolio**: [Este sitio web](https://portfolio-antonio-padilla.vercel.app)
+- 🌐 **Portfolio**: [Este sitio web](https://antonio-padilla.vercel.app)
 - 📧 **Email**: [antoniojesuspadilla@email.com](mailto:antoniojesuspadilla@email.com)
 - 💼 **LinkedIn**: [linkedin.com/in/antoniojesuspadilla](https://linkedin.com/in/antoniojesuspadilla)
 - 🐙 **GitHub**: [AntonioJesusPadilla](https://github.com/AntonioJesusPadilla)
