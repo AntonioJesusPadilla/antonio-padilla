@@ -7,6 +7,14 @@ const projects = await fetchProjectsFromNotion();
 
 const featuredProjects = [
   {
+    name: 'Copilot Salud Andalucía - Sistema Inteligente de Análisis Sanitario',
+    description: 'Plataforma web avanzada de análisis sanitario para la provincia de Málaga con inteligencia artificial, mapas interactivos épicos, sistema RBAC completo y dashboards personalizados por rol. Integra análisis predictivo, optimización de recursos y planificación estratégica del sistema sanitario.',
+    url: 'https://github.com/AntonioJesusPadilla/copilot-salud-andalucia',
+    demo: 'https://copilot-salud-andalucia.streamlit.app/',
+    tags: ['Streamlit', 'Python', 'FastAPI', 'Groq IA', 'Folium', 'Pandas', 'JWT', 'PostgreSQL'],
+    featured: true
+  },
+  {
     name: 'Jarvis - Asistente de Investigación IA',
     description: 'Asistente de investigación inteligente con interfaz de chat responsive, toggle de temas y procesamiento de IA. Sistema completo con frontend Next.js, backend FastAPI y automatización con n8n.',
     url: 'https://github.com/AntonioJesusPadilla/jarvis',
@@ -93,14 +101,15 @@ const featuredProjects = [
 
         <h3 class="text-xl font-semibold mt-10 mb-4 text-gray-900 dark:text-white">Especialidades e Intereses</h3>
         <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-          <li>Desarrollo de asistentes de IA y sistemas de chat inteligentes</li>
+          <li>Sistemas sanitarios inteligentes con análisis predictivo y optimización de recursos</li>
+          <li>Asistentes de IA especializados con Groq Llama 3.3 y procesamiento de lenguaje natural</li>
+          <li>Análisis geoespacial avanzado con mapas interactivos épicos usando Folium</li>
+          <li>Sistemas RBAC completos con JWT, bcrypt y personalización por rol con auditoría</li>
+          <li>Dashboards personalizados con temas únicos por rol y análisis empresarial</li>
           <li>Procesamiento de documentos con OCR e inteligencia artificial</li>
-          <li>Pipelines de datos robustos con fallback heurístico</li>
-          <li>Automatización avanzada con n8n, Docker y herramientas modernas</li>
-          <li>Visualización interactiva de datos con Power BI</li>
-          <li>Integración de APIs de OpenAI y modelos LLM</li>
-          <li>Diseño de interfaces responsive y experiencias de usuario excepcionales</li>
-          <li>Arquitecturas full-stack escalables con FastAPI y Next.js</li>
+          <li>Automatización avanzada con n8n, Docker y sistemas de fallback robustos</li>
+          <li>Arquitecturas full-stack escalables con Streamlit, FastAPI y Next.js</li>
+          <li>Análisis de equidad territorial con reportes avanzados y proyecciones demográficas</li>
         </ul>
       </div>
     </div>
@@ -133,6 +142,14 @@ const featuredProjects = [
                 </svg>
                 Ver en GitHub
               </a>
+              {p.demo && (
+                <a href={p.demo} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                  Demo en Vivo
+                </a>
+              )}
             </div>
           </div>
         ))}

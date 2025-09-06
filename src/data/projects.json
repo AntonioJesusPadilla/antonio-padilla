@@ -1,5 +1,23 @@
 [
   {
+    "title": "Copilot Salud Andalucía - Sistema Inteligente de Análisis Sanitario",
+    "description": "Plataforma web avanzada de análisis sanitario para la provincia de Málaga con inteligencia artificial, mapas interactivos épicos, sistema RBAC completo y dashboards personalizados por rol. Integra análisis predictivo, optimización de recursos y planificación estratégica del sistema sanitario.",
+    "tags": ["Streamlit", "Python", "FastAPI", "Groq IA", "Folium", "Pandas", "JWT", "PostgreSQL", "bcrypt", "RBAC"],
+    "image": "/screenshots/copilot-salud-demo.jpg",
+    "link": "https://github.com/AntonioJesusPadilla/copilot-salud-andalucia",
+    "demo": "https://copilot-salud-andalucia.streamlit.app/",
+    "features": [
+      "Asistente IA especializado con Groq Llama 3.3 70B para análisis sanitario",
+      "Mapas épicos interactivos con Folium y control de acceso por permisos",
+      "Dashboards personalizados por rol con temas visuales únicos",
+      "Sistema RBAC completo con JWT, bcrypt y auditoría de accesos",
+      "Análisis geoespacial con heatmaps y optimización de rutas",
+      "Reportes avanzados incluido análisis de equidad territorial",
+      "Datos reales de hospitales, demografía e indicadores de salud",
+      "Planificación estratégica con proyecciones y optimización de recursos"
+    ]
+  },
+  {
     "title": "Jarvis - Asistente de Investigación IA",
     "description": "Asistente de investigación inteligente con interfaz de chat responsive, toggle de temas y procesamiento de IA. Sistema completo con frontend Next.js, backend FastAPI y automatización con n8n.",
     "tags": ["Next.js", "TypeScript", "FastAPI", "Python", "n8n", "Docker", "IA", "Tailwind CSS"],

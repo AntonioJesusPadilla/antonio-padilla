@@ -15,10 +15,10 @@ export interface ProfileData {
 }
 
 export const profile: ProfileData = {
-  name: 'Antonio Padilla',
-  title: 'Desarrollador Full Stack',
-  description: 'Apasionado desarrollador con experiencia en tecnologías modernas y soluciones innovadoras',
-  image: '/avatar.svg',
+  name: 'Antonio Jesús Padilla',
+  title: 'Desarrollador Full Stack & Especialista en IA',
+  description: 'Desarrollador full-stack especializado en interfaces modernas, automatización inteligente y soluciones de IA. Me apasiona crear aplicaciones completas que combinan frontend moderno con backends robustos y sistemas de IA.',
+  image: '/antonio-avatar.svg',
   socialLinks: [
     { name: 'GitHub', url: 'https://github.com/AntonioJesusPadilla', icon: 'github' },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/antoniojesuspadilla', icon: 'linkedin' },
@@ -26,10 +26,11 @@ export const profile: ProfileData = {
   ],
   about: `Soy desarrollador full-stack especializado en crear soluciones completas que integran inteligencia artificial, automatización avanzada y experiencias de usuario excepcionales.
 
-Mi experiencia abarca desde el desarrollo de asistentes de investigación inteligentes con interfaces de chat responsive (Jarvis) hasta pipelines robustos de procesamiento de documentos con OCR e IA (FactuAI). Combino tecnologías frontend modernas como Next.js y React con backends potentes en FastAPI y Python, además de herramientas de automatización como n8n y Docker.
+Mi experiencia abarca desde sistemas sanitarios inteligentes con análisis geoespacial (Copilot Salud Andalucía) hasta asistentes de investigación con interfaces de chat responsive (Jarvis) y pipelines robustos de procesamiento de documentos con OCR e IA (FactuAI). Combino tecnologías frontend modernas como Streamlit, Next.js y React con backends potentes en FastAPI y Python, además de herramientas de automatización como n8n y Docker.
 
-Me especializo en proyectos que requieren procesamiento inteligente de datos, visualización avanzada con Power BI, y sistemas que combinan múltiples tecnologías para resolver problemas complejos del mundo real. Mi enfoque se centra en crear código limpio, mantenible y escalable que integre eficientemente servicios de IA con interfaces intuitivas.`,
+Me especializo en sistemas RBAC completos, análisis geoespacial con mapas interactivos, asistentes de IA especializados con Groq Llama 3.3, y dashboards personalizados. Mi enfoque se centra en crear código limpio, mantenible y escalable que integre eficientemente servicios de IA con interfaces intuitivas para resolver problemas complejos del mundo real.`,
   skills: [
+    'Streamlit',
     'Next.js',
     'Astro',
     'JavaScript',
@@ -39,14 +40,19 @@ Me especializo en proyectos que requieren procesamiento inteligente de datos, vi
     'FastAPI',
     'Python',
     'Node.js',
+    'Groq IA',
+    'OpenAI',
     'n8n',
     'Docker',
     'Power BI',
-    'OpenAI',
+    'Folium',
+    'Pandas',
+    'JWT',
+    'bcrypt',
     'OCR/Tesseract',
     'SQLite',
-    'Make',
     'PostgreSQL',
+    'Make',
     'Git',
     'IA/LLM'
   ]

@@ -10,6 +10,7 @@ Con experiencia en desarrollo de asistentes de IA, interfaces de chat responsive
 
 ### 🎨 Frontend & Frameworks
 ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=nextdotjs)
+![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat-square&logo=streamlit)
 ![Astro](https://img.shields.io/badge/-Astro-FF5D01?style=flat-square&logo=astro)
 ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript)
@@ -22,9 +23,12 @@ Con experiencia en desarrollo de asistentes de IA, interfaces de chat responsive
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=nodedotjs)
 ![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=flat-square&logo=sqlite)
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql)
+![JWT](https://img.shields.io/badge/-JWT-000000?style=flat-square&logo=jsonwebtokens)
+![bcrypt](https://img.shields.io/badge/-bcrypt-338834?style=flat-square&logo=security)
 
 ### 🤖 IA & Automatización
 ![OpenAI](https://img.shields.io/badge/-OpenAI-412991?style=flat-square&logo=openai)
+![Groq](https://img.shields.io/badge/-Groq-F55036?style=flat-square&logo=groq)
 ![n8n](https://img.shields.io/badge/-n8n-EA4B71?style=flat-square&logo=n8n)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker)
 ![Make](https://img.shields.io/badge/-Make-6366F1?style=flat-square&logo=make)
@@ -33,11 +37,30 @@ Con experiencia en desarrollo de asistentes de IA, interfaces de chat responsive
 ### 🛠️ Herramientas & DevOps
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git)
 ![Vercel](https://img.shields.io/badge/-Vercel-000000?style=flat-square&logo=vercel)
+![Folium](https://img.shields.io/badge/-Folium-77B829?style=flat-square&logo=leaflet)
+![Pandas](https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas)
 ![Tesseract](https://img.shields.io/badge/-OCR/Tesseract-005571?style=flat-square&logo=google)
 
 ---
 
 ## 🚀 Proyectos Destacados
+
+### 🏥 [Copilot Salud Andalucía - Sistema Inteligente de Análisis Sanitario](https://github.com/AntonioJesusPadilla/copilot-salud-andalucia)
+**Stack:** Streamlit, Python, FastAPI, Groq IA, Folium, Pandas, JWT, PostgreSQL
+> Plataforma web avanzada de análisis sanitario para la provincia de Málaga con inteligencia artificial, mapas interactivos épicos, sistema RBAC completo y dashboards personalizados por rol. Integra análisis predictivo, optimización de recursos y planificación estratégica del sistema sanitario.
+
+**Características destacadas:**
+
+* 🤖 **Asistente IA Especializado** con Groq Llama 3.3 70B para análisis sanitario
+* 🗺️ **Mapas Épicos Interactivos** con Folium y control de acceso por permisos
+* 🎨 **Dashboards Personalizados** por rol con temas visuales únicos
+* 🔐 **Sistema RBAC Completo** con JWT, bcrypt y auditoría de accesos
+* 📊 **Análisis Geoespacial** con heatmaps y optimización de rutas
+* 📋 **Reportes Avanzados** incluido análisis de equidad territorial
+* 🏥 **Datos Reales** de hospitales, demografía e indicadores de salud
+* 🚀 **Planificación Estratégica** con proyecciones y optimización de recursos
+
+**Demo Live:** [copilot-salud-andalucia.streamlit.app](https://copilot-salud-andalucia.streamlit.app/)
 
 ### 🤖 [Jarvis - Asistente de Investigación IA](https://github.com/AntonioJesusPadilla/jarvis)
 **Stack:** Next.js, TypeScript, FastAPI, Python, n8n, Docker, IA
@@ -75,11 +98,15 @@ Con experiencia en desarrollo de asistentes de IA, interfaces de chat responsive
 
 ## 🎯 Especialidades
 
-- 🤖 **Asistentes de IA**: Desarrollo de sistemas de chat inteligentes y procesamiento de lenguaje natural
+- 🤖 **Asistentes de IA Especializados**: Desarrollo de sistemas de chat inteligentes con Groq Llama 3.3 y procesamiento de lenguaje natural
+- 🏥 **Sistemas Sanitarios Inteligentes**: Análisis predictivo, optimización de recursos y planificación estratégica en salud pública
+- 🗺️ **Análisis Geoespacial Avanzado**: Mapas interactivos épicos con Folium, heatmaps y análisis territorial completo
+- 🔐 **Sistemas RBAC Completos**: Control de acceso granular con JWT, bcrypt y personalización por rol con auditoría
+- 📊 **Dashboards Personalizados**: Visualización interactiva con temas únicos por rol y análisis empresarial con Power BI
 - 🔍 **Procesamiento de Documentos**: OCR, extracción de datos e identificación de campos con IA
 - 🔄 **Automatización Avanzada**: Pipelines robustos con n8n, Docker y sistemas de fallback
-- 📊 **Visualización de Datos**: Dashboards interactivos y análisis empresarial con Power BI
-- 🏗️ **Arquitecturas Full-Stack**: Soluciones escalables con FastAPI, Next.js y bases de datos optimizadas
+- 🏗️ **Arquitecturas Full-Stack**: Soluciones escalables con FastAPI, Streamlit, Next.js y bases de datos optimizadas
+- 📈 **Análisis de Equidad Territorial**: Reportes avanzados con proyecciones demográficas y optimización de rutas
 
 ---
 
@@ -95,10 +122,13 @@ Con experiencia en desarrollo de asistentes de IA, interfaces de chat responsive
 ## 🚀 Estado Actual
 
 🎉 **Portfolio completamente funcional** con proyectos destacados que demuestran expertise en:
-- Desarrollo full-stack moderno
-- Integración de IA y automatización
+- Desarrollo full-stack moderno con Streamlit y Next.js
+- Sistemas sanitarios inteligentes con análisis geoespacial
+- Asistentes de IA especializados con Groq Llama 3.3
+- Sistemas RBAC completos con JWT y bcrypt
+- Integración de IA y automatización avanzada
 - Procesamiento inteligente de documentos
-- Visualización avanzada de datos
+- Visualización avanzada de datos con dashboards personalizados
 
 ---
 
