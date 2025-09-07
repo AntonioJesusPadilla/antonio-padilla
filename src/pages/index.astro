@@ -51,66 +51,335 @@ const featuredProjects = [
 
 <BaseLayout title={`${profile.name} | Portfolio`}>
   <!-- Hero Section -->
-  <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
-    <div class="container flex flex-col md:flex-row items-center gap-12">
-      <div class="md:w-1/3 flex justify-center">
+  <section class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-4 -mt-20 pt-20">
+    <div class="container max-w-4xl mx-auto text-center">
+      <div class="mb-8">
         <img 
           src={profile.image} 
           alt={profile.name}
-          width="300"
-          height="300"
-          class="rounded-full w-64 h-64 object-cover border-4 border-primary-500 shadow-lg"
+          width="150"
+          height="150"
+          class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover mx-auto mb-8 border-2 border-primary-500"
         />
       </div>
-      <div class="md:w-2/3 text-center md:text-left">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gray-900 dark:text-white">
-          {profile.name}
+      
+      <div class="mb-8">
+        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-4">Hola,</p>
+        <h1 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+          Mi nombre es {profile.name}
         </h1>
-        <h2 class="text-2xl md:text-3xl text-primary-600 dark:text-primary-400 mb-6">
-          {profile.title}
-        </h2>
-        <p class="text-lg mb-8 max-w-2xl mx-auto md:mx-0 text-gray-700 dark:text-gray-300">
-          {profile.description}
-        </p>
         
-        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-          <a href="/proyectos" class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium">Ver proyectos</a>
-          <a href="#contact" class="inline-block px-6 py-3 border border-primary-600 text-primary-700 dark:text-primary-300 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors font-medium">Contactar</a>
+        <div class="text-2xl md:text-4xl font-bold mb-8">
+          <span class="text-gray-900 dark:text-white">Soy un </span>
+          <span id="dynamic-text" class="text-primary-600 dark:text-primary-400 border-r-2 border-primary-600 dark:border-primary-400 animate-pulse">
+            Desarrollador Full Stack
+          </span>
+        </div>
+      </div>
+      
+      <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+        {profile.description}
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#experience" class="inline-block px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
+          Ver Experiencia
+        </a>
+        <a href="#contact" class="inline-block px-8 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 font-medium">
+          Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Animación de texto dinámico
+    const roles = [
+      'Desarrollador Full Stack',
+      'Especialista en IA',
+      'Desarrollador Frontend',
+      'Desarrollador Backend',
+      'Experto en Streamlit',
+      'Desarrollador Python'
+    ];
+    
+    let currentRole = 0;
+    const dynamicText = document.getElementById('dynamic-text');
+    
+    function typeText(text, callback) {
+      dynamicText.textContent = '';
+      let i = 0;
+      const typing = setInterval(() => {
+        dynamicText.textContent += text[i];
+        i++;
+        if (i >= text.length) {
+          clearInterval(typing);
+          setTimeout(callback, 2000);
+        }
+      }, 100);
+    }
+    
+    function deleteText(callback) {
+      const text = dynamicText.textContent;
+      let i = text.length;
+      const deleting = setInterval(() => {
+        dynamicText.textContent = text.slice(0, i);
+        i--;
+        if (i < 0) {
+          clearInterval(deleting);
+          callback();
+        }
+      }, 50);
+    }
+    
+    function animateRoles() {
+      typeText(roles[currentRole], () => {
+        deleteText(() => {
+          currentRole = (currentRole + 1) % roles.length;
+          animateRoles();
+        });
+      });
+    }
+    
+    // Iniciar animación después de 1 segundo
+    setTimeout(animateRoles, 1000);
+  </script>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-gray-900 dark:text-white">Experiencia laboral</h2>
+      
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-8 md:left-16 top-0 bottom-0 w-0.5 bg-primary-200 dark:bg-primary-800"></div>
+        
+        <div class="space-y-12">
+          <!-- Experience Item 1 -->
+          <div class="relative flex items-start">
+            <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-gray-900 rounded-full border-4 border-primary-500 flex items-center justify-center shadow-lg">
+              <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-600 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-sm md:text-base">AJ</span>
+              </div>
+            </div>
+            
+            <div class="ml-6 md:ml-8 flex-1 bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 md:p-8">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">Desarrollador Full Stack Independiente</h3>
+                <span class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">2023 - Actualidad</span>
+              </div>
+              
+              <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                Desarrollo de sistemas sanitarios inteligentes, asistentes de IA especializados y aplicaciones web modernas. 
+                Especializado en análisis geoespacial, sistemas RBAC y dashboards personalizados.
+              </p>
+              
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm font-medium">Streamlit</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">Python</span>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">FastAPI</span>
+                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">Groq AI</span>
+                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Next.js</span>
+                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="relative flex items-start">
+            <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-gray-900 rounded-full border-4 border-primary-500 flex items-center justify-center shadow-lg">
+              <div class="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-xs">DEV</span>
+              </div>
+            </div>
+            
+            <div class="ml-6 md:ml-8 flex-1 bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 md:p-8">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">Desarrollador de Sistemas IA</h3>
+                <span class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">2022 - 2023</span>
+              </div>
+              
+              <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                Desarrollo de asistentes de investigación inteligentes, pipelines de procesamiento de documentos con OCR 
+                y sistemas de automatización avanzada con integración de APIs de IA.
+              </p>
+              
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">React</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">TypeScript</span>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">OpenAI</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium">Docker</span>
+                <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-sm font-medium">n8n</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 3 -->
+          <div class="relative flex items-start">
+            <div class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-gray-900 rounded-full border-4 border-primary-500 flex items-center justify-center shadow-lg">
+              <div class="w-8 h-8 md:w-10 md:h-10 bg-yellow-600 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-xs">FS</span>
+              </div>
+            </div>
+            
+            <div class="ml-6 md:ml-8 flex-1 bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 md:p-8">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">Desarrollador Full Stack</h3>
+                <span class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">2021 - 2022</span>
+              </div>
+              
+              <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                Desarrollo de aplicaciones web completas con React, Node.js y bases de datos relacionales. 
+                Enfoque en experiencia de usuario y arquitecturas escalables.
+              </p>
+              
+        <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">React</span>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Node.js</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">JavaScript</span>
+                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">SQLite</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-white dark:bg-gray-900">
-    <div class="container">
-      <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">Sobre mí</h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="whitespace-pre-line mb-8 text-gray-700 dark:text-gray-300 leading-relaxed">
-          {profile.about}
-        </p>
-        
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Tecnologías que uso</h3>
-        <div class="flex flex-wrap gap-2">
-          {profile.skills.map(skill => (
-            <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full text-sm font-medium">
-              {skill}
-            </span>
-          ))}
+  <!-- Technologies Section -->
+  <section id="technologies" class="py-20 bg-white dark:bg-gray-900">
+    <div class="container max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-gray-900 dark:text-white">Tecnologías</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+        <!-- Frontend Technologies -->
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-red-400 to-red-600 rounded-lg text-white font-bold text-xl shadow-lg">
+            St
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Streamlit</span>
         </div>
 
-        <h3 class="text-xl font-semibold mt-10 mb-4 text-gray-900 dark:text-white">Especialidades e Intereses</h3>
-        <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-          <li>Sistemas sanitarios inteligentes con análisis predictivo y optimización de recursos</li>
-          <li>Asistentes de IA especializados con Groq Llama 3.3 y procesamiento de lenguaje natural</li>
-          <li>Análisis geoespacial avanzado con mapas interactivos épicos usando Folium</li>
-          <li>Sistemas RBAC completos con JWT, bcrypt y personalización por rol con auditoría</li>
-          <li>Dashboards personalizados con temas únicos por rol y análisis empresarial</li>
-          <li>Procesamiento de documentos con OCR e inteligencia artificial</li>
-          <li>Automatización avanzada con n8n, Docker y sistemas de fallback robustos</li>
-          <li>Arquitecturas full-stack escalables con Streamlit, FastAPI y Next.js</li>
-          <li>Análisis de equidad territorial con reportes avanzados y proyecciones demográficas</li>
-        </ul>
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg text-white font-bold text-lg shadow-lg">
+            ⚛️
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">React</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-black to-gray-800 rounded-lg text-white font-bold text-sm shadow-lg">
+            Next
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Next.js</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg text-white font-bold text-sm shadow-lg">
+            TS
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">TypeScript</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-orange-400 to-red-500 rounded-lg text-white font-bold text-sm shadow-lg">
+            🎨
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Tailwind CSS</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg text-white font-bold text-sm shadow-lg">
+            🚀
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Astro</span>
+        </div>
+
+        <!-- Backend Technologies -->
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg text-white font-bold text-sm shadow-lg">
+            🐍
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Python</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-teal-400 to-teal-600 rounded-lg text-white font-bold text-xs shadow-lg">
+            Fast
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">FastAPI</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-green-400 to-green-600 rounded-lg text-white font-bold text-sm shadow-lg">
+            📊
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Node.js</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg text-white font-bold text-sm shadow-lg">
+            🛡️
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">JWT</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg text-white font-bold text-sm shadow-lg">
+            🗄️
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">PostgreSQL</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg text-white font-bold text-sm shadow-lg">
+            🐳
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Docker</span>
+        </div>
+
+        <!-- AI & Data Technologies -->
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-orange-500 to-red-600 rounded-lg text-white font-bold text-xs shadow-lg">
+            Groq
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Groq AI</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg text-white font-bold text-sm shadow-lg">
+            🤖
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">OpenAI</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-green-500 to-green-700 rounded-lg text-white font-bold text-sm shadow-lg">
+            🗺️
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Folium</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg text-white font-bold text-sm shadow-lg">
+            🐼
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Pandas</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-pink-500 to-pink-700 rounded-lg text-white font-bold text-sm shadow-lg">
+            🔄
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">n8n</span>
+        </div>
+
+        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg text-white font-bold text-sm shadow-lg">
+            📊
+          </div>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Power BI</span>
+        </div>
       </div>
     </div>
   </section>
@@ -177,21 +446,190 @@ const featuredProjects = [
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-white dark:bg-gray-900">
-    <div class="container">
-      <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">Contacto</h2>
-      <div class="max-w-2xl mx-auto text-center space-y-4">
-        <p class="text-lg text-gray-700 dark:text-gray-300">
-          ¿Te gustaría trabajar juntos? ¡No dudes en contactarme!
-        </p>
-        <div class="flex items-center justify-center gap-4">
-          <a 
-            href="mailto:antoniojesuspadilla.dev@proton.me" 
-            class="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
-          >
-            Escribir por email
-          </a>
+    <div class="container max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-gray-900 dark:text-white">Contáctame</h2>
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="space-y-6">
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Nombre completo
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200"
+                placeholder="Tu nombre completo"
+              />
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Correo Electrónico
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200"
+                placeholder="tu@email.com"
+              />
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Asunto
+              </label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200"
+                placeholder="Asunto del mensaje"
+              />
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Mensaje
+              </label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200 resize-none"
+                placeholder="Cuéntame sobre tu proyecto o idea..."
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit"
+              class="w-full px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+              ¿Tienes un proyecto en mente?
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+              Estoy disponible para nuevos proyectos y colaboraciones. 
+              Ya sea que necesites un sistema de IA, una aplicación web moderna 
+              o consultoría técnica, me encantaría escuchar tu idea.
+            </p>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Correo Electrónico</p>
+                <a href="mailto:antoniojesuspadilla.dev@proton.me" class="text-gray-900 dark:text-white font-medium hover:text-primary-600 transition-colors">
+                  antoniojesuspadilla.dev@proton.me
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">GitHub</p>
+                <a href="https://github.com/AntonioJesusPadilla" target="_blank" class="text-gray-900 dark:text-white font-medium hover:text-primary-600 transition-colors">
+                  AntonioJesusPadilla
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
+                <a href="https://linkedin.com/in/antoniojesuspadilla" target="_blank" class="text-gray-900 dark:text-white font-medium hover:text-primary-600 transition-colors">
+                  antoniojesuspadilla
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pt-6 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+              También puedes:
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a 
+                href="https://calendly.com/antoniojesuspadilla" 
+                target="_blank"
+                class="inline-flex items-center justify-center px-4 py-2 border border-primary-600 text-primary-600 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors text-sm font-medium"
+              >
+                📅 Agendar una reunión
+              </a>
+              <a 
+                href="/proyectos"
+                class="inline-flex items-center justify-center px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm font-medium"
+              >
+                🚀 Ver mis proyectos
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+  
+  <script>
+    // Handle contact form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const subject = formData.get('subject');
+      const message = formData.get('message');
+      
+      // Create mailto link
+      const mailtoLink = `mailto:antoniojesuspadilla.dev@proton.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hola Antonio,\n\nMi nombre es ${name} (${email}).\n\n${message}\n\nSaludos!`)}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      const button = this.querySelector('button[type="submit"]');
+      const originalText = button.textContent;
+      button.textContent = '¡Mensaje enviado!';
+      button.classList.add('bg-green-600', 'hover:bg-green-700');
+      button.classList.remove('bg-primary-600', 'hover:bg-primary-700');
+      
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove('bg-green-600', 'hover:bg-green-700');
+        button.classList.add('bg-primary-600', 'hover:bg-primary-700');
+        this.reset();
+      }, 3000);
+    });
+  </script>
 </BaseLayout>

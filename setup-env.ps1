@@ -1,5 +1,5 @@
 # Script para configurar el entorno virtual de Node.js
-Write-Host "🚀 Configurando entorno virtual para Portfolio Antonio Padilla..." -ForegroundColor Green
+Write-Host "🚀 Configurando entorno virtual para Portfolio Antonio Jesús Padilla..." -ForegroundColor Green
 
 # Verificar si Node.js está instalado
 try {
