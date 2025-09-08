@@ -1,0 +1,158 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="astroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF5D01;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8A3D;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="reactGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#61DAFB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#21A1C4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="#0F172A" rx="12"/>
+  
+  <!-- Desktop mockup -->
+  <rect x="50" y="40" width="300" height="180" fill="#1E293B" rx="8"/>
+  <rect x="60" y="50" width="280" height="150" fill="url(#screenGrad)" rx="4"/>
+  
+  <!-- Browser header -->
+  <rect x="60" y="50" width="280" height="25" fill="#374151" rx="4"/>
+  <circle cx="75" cy="62" r="4" fill="#EF4444"/>
+  <circle cx="90" cy="62" r="4" fill="#F59E0B"/>
+  <circle cx="105" cy="62" r="4" fill="#10B981"/>
+  
+  <!-- URL bar -->
+  <rect x="125" y="57" width="150" height="10" fill="#1F2937" rx="5"/>
+  <text x="200" y="64" font-family="Arial" font-size="6" text-anchor="middle" fill="#9CA3AF">antonio-padilla.vercel.app</text>
+  
+  <!-- Website content -->
+  <!-- Header -->
+  <rect x="70" y="85" width="260" height="20" fill="#FFFFFF" rx="2"/>
+  <circle cx="85" cy="95" r="6" fill="#3B82F6"/>
+  <rect x="100" y="92" width="60" height="3" fill="#374151" rx="1"/>
+  <rect x="100" y="97" width="40" height="2" fill="#6B7280" rx="1"/>
+  
+  <!-- Navigation -->
+  <rect x="240" y="90" width="80" height="10" fill="#F3F4F6" rx="2"/>
+  <rect x="245" y="92" width="12" height="2" fill="#374151" rx="1"/>
+  <rect x="260" y="92" width="15" height="2" fill="#374151" rx="1"/>
+  <rect x="278" y="92" width="18" height="2" fill="#374151" rx="1"/>
+  <rect x="299" y="92" width="16" height="2" fill="#374151" rx="1"/>
+  
+  <!-- Hero section -->
+  <rect x="70" y="110" width="260" height="40" fill="#F8FAFC" rx="2"/>
+  <circle cx="200" cy="120" r="8" fill="#3B82F6"/>
+  <rect x="150" y="132" width="100" height="4" fill="#1F2937" rx="2"/>
+  <rect x="170" y="138" width="60" height="3" fill="#6B7280" rx="1"/>
+  <rect x="160" y="144" width="80" height="2" fill="#9CA3AF" rx="1"/>
+  
+  <!-- Projects grid -->
+  <rect x="70" y="155" width="75" height="35" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="2"/>
+  <rect x="75" y="160" width="65" height="15" fill="#FF4B4B" rx="1"/>
+  <rect x="75" y="178" width="40" height="2" fill="#374151" rx="1"/>
+  <rect x="75" y="182" width="55" height="2" fill="#6B7280" rx="1"/>
+  <rect x="75" y="186" width="30" height="2" fill="#9CA3AF" rx="1"/>
+  
+  <rect x="155" y="155" width="75" height="35" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="2"/>
+  <rect x="160" y="160" width="65" height="15" fill="#3B82F6" rx="1"/>
+  <rect x="160" y="178" width="40" height="2" fill="#374151" rx="1"/>
+  <rect x="160" y="182" width="55" height="2" fill="#6B7280" rx="1"/>
+  <rect x="160" y="186" width="30" height="2" fill="#9CA3AF" rx="1"/>
+  
+  <rect x="240" y="155" width="75" height="35" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="2"/>
+  <rect x="245" y="160" width="65" height="15" fill="#10B981" rx="1"/>
+  <rect x="245" y="178" width="40" height="2" fill="#374151" rx="1"/>
+  <rect x="245" y="182" width="55" height="2" fill="#6B7280" rx="1"/>
+  <rect x="245" y="186" width="30" height="2" fill="#9CA3AF" rx="1"/>
+  
+  <!-- Desktop stand -->
+  <rect x="190" y="220" width="20" height="15" fill="#374151" rx="2"/>
+  <rect x="170" y="235" width="60" height="5" fill="#374151" rx="2"/>
+  
+  <!-- Mobile responsive -->
+  <rect x="30" y="80" width="15" height="25" fill="#1F2937" rx="2"/>
+  <rect x="32" y="82" width="11" height="18" fill="url(#screenGrad)" rx="1"/>
+  <rect x="33" y="84" width="9" height="2" fill="#3B82F6" rx="1"/>
+  <rect x="33" y="87" width="6" height="1" fill="#374151" rx="0.5"/>
+  <rect x="33" y="89" width="9" height="8" fill="#F3F4F6" rx="1"/>
+  <rect x="34" y="90" width="7" height="2" fill="#FF4B4B" rx="1"/>
+  <rect x="34" y="93" width="5" height="1" fill="#374151" rx="0.5"/>
+  <rect x="34" y="95" width="7" height="1" fill="#6B7280" rx="0.5"/>
+  
+  <!-- Tablet responsive -->
+  <rect x="370" y="70" width="20" height="30" fill="#1F2937" rx="3"/>
+  <rect x="372" y="72" width="16" height="23" fill="url(#screenGrad)" rx="2"/>
+  <rect x="374" y="74" width="12" height="3" fill="#3B82F6" rx="1"/>
+  <rect x="374" y="78" width="8" height="1" fill="#374151" rx="0.5"/>
+  <rect x="374" y="81" width="12" height="11" fill="#F3F4F6" rx="1"/>
+  <rect x="375" y="83" width="10" height="2" fill="#FF4B4B" rx="1"/>
+  <rect x="375" y="86" width="6" height="1" fill="#374151" rx="0.5"/>
+  <rect x="375" y="88" width="10" height="1" fill="#6B7280" rx="0.5"/>
+  
+  <!-- Technology icons -->
+  <!-- Astro -->
+  <circle cx="80" cy="30" r="12" fill="url(#astroGrad)"/>
+  <path d="M70 25 Q80 20 90 25 Q85 35 80 35 Q75 35 70 25" fill="white"/>
+  <text x="80" y="32" font-family="Arial" font-size="6" text-anchor="middle" fill="#FF5D01">🚀</text>
+  
+  <!-- React -->
+  <circle cx="120" cy="30" r="12" fill="url(#reactGrad)"/>
+  <circle cx="120" cy="30" r="6" fill="none" stroke="white" stroke-width="1"/>
+  <ellipse cx="120" cy="30" rx="10" ry="4" fill="none" stroke="white" stroke-width="1"/>
+  <ellipse cx="120" cy="30" rx="10" ry="4" fill="none" stroke="white" stroke-width="1" transform="rotate(60 120 30)"/>
+  <ellipse cx="120" cy="30" rx="10" ry="4" fill="none" stroke="white" stroke-width="1" transform="rotate(-60 120 30)"/>
+  <circle cx="120" cy="30" r="2" fill="white"/>
+  
+  <!-- TypeScript -->
+  <rect x="154" y="18" width="24" height="24" fill="#3178C6" rx="4"/>
+  <text x="166" y="32" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">TS</text>
+  
+  <!-- Tailwind -->
+  <circle cx="220" cy="30" r="12" fill="#06B6D4"/>
+  <path d="M210 30 Q220 25 230 30 Q225 35 215 32 Q220 30 210 30" fill="white"/>
+  
+  <!-- Vercel -->
+  <polygon points="280,18 292,42 268,42" fill="#000000"/>
+  
+  <!-- SEO optimization -->
+  <rect x="320" y="18" width="24" height="24" fill="#10B981" rx="4"/>
+  <text x="332" y="32" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="white">SEO</text>
+  
+  <!-- Performance metrics -->
+  <g transform="translate(350, 120)">
+    <rect x="0" y="0" width="40" height="30" fill="#10B981" rx="4"/>
+    <text x="20" y="12" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="white">100</text>
+    <text x="20" y="22" font-family="Arial" font-size="6" text-anchor="middle" fill="white">Performance</text>
+  </g>
+  
+  <!-- Dark mode toggle -->
+  <circle cx="350" cy="50" r="8" fill="#374151"/>
+  <circle cx="350" cy="50" r="6" fill="#F59E0B"/>
+  <circle cx="352" cy="48" r="2" fill="#374151"/>
+  
+  <!-- Title and description -->
+  <text x="200" y="220" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Portfolio Personal</text>
+  <text x="200" y="235" font-family="Arial" font-size="12" text-anchor="middle" fill="#94A3B8">Desarrollado con Astro, React y Tailwind CSS</text>
+  
+  <!-- Tech badges -->
+  <rect x="80" y="190" width="35" height="16" fill="#FF5D01" rx="8"/>
+  <text x="97" y="201" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Astro</text>
+  
+  <rect x="125" y="190" width="35" height="16" fill="#61DAFB" rx="8"/>
+  <text x="142" y="201" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">React</text>
+  
+  <rect x="170" y="190" width="45" height="16" fill="#3178C6" rx="8"/>
+  <text x="192" y="201" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">TypeScript</text>
+  
+  <rect x="225" y="190" width="50" height="16" fill="#06B6D4" rx="8"/>
+  <text x="250" y="201" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Tailwind CSS</text>
+  
+  <rect x="285" y="190" width="35" height="16" fill="#000000" rx="8"/>
+  <text x="302" y="201" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle" fill="white">Vercel</text>
+</svg>

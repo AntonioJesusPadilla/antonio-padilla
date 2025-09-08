@@ -55,14 +55,48 @@
     "description": "Portfolio personal desarrollado con Astro, React y Tailwind CSS. Diseño moderno y responsive con integración de datos dinámicos y optimización SEO.",
     "tags": ["Astro", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     "image": "/screenshots/portfolio-demo.jpg",
-    "link": "https://github.com/AntonioJesusPadilla/portfolio-antonio-padilla",
-    "demo": "https://portfolio-antonio-padilla.vercel.app",
+    "link": "https://github.com/AntonioJesusPadilla/antonio-padilla",
+    "demo": "https://antonio-padilla.vercel.app",
     "features": [
       "Diseño responsive y moderno",
       "Integración con Notion API",
       "Optimización SEO y rendimiento",
       "Tema oscuro/claro personalizable",
       "Deploy automático con Vercel"
+    ]
+  },
+  {
+    "title": "Informe Cripto-Macro Power BI",
+    "description": "Análisis completo de Bitcoin, sentimiento de mercado y macroeconomía (2020-2025) con visualizaciones interactivas en Power BI. Explora correlaciones entre precios de BTC, indicadores macroeconómicos y sentimiento del mercado.",
+    "tags": ["Power BI", "DAX", "Power Query", "Bitcoin", "Macroeconomía", "Análisis de Datos", "Kaggle", "FRED"],
+    "image": "/projects/bitcoin-simple.svg",
+    "link": "https://github.com/AntonioJesusPadilla/informe-cripto-macro",
+    "features": [
+      "Análisis de precios de Bitcoin con datos históricos",
+      "Indicadores de sentimiento: Fear & Greed Index + Google Trends",
+      "Variables macroeconómicas: inflación, tasas de interés, S&P500, DXY",
+      "Matriz de correlación BTC vs indicadores macro",
+      "KPIs dinámicos y visualizaciones interactivas",
+      "ETL completo con Power Query (M code)",
+      "Reportes exportables en PDF",
+      "Datos actualizados de Kaggle y FRED"
+    ]
+  },
+  {
+    "title": "Kanban Taller de Coches",
+    "description": "Aplicación web para gestión de reparaciones en taller de coches con tablero Kanban interactivo. Sistema completo con autenticación Firebase, gestión de estados y dashboard de métricas en tiempo real.",
+    "tags": ["React", "Vite", "Firebase", "Firestore", "Tailwind CSS", "React Router", "Kanban", "Gestión de Proyectos"],
+    "image": "/screenshots/kanban-taller-demo.jpg",
+    "link": "https://github.com/AntonioJesusPadilla/kanban-taller-2.0",
+    "features": [
+      "Autenticación de usuarios con Firebase Auth",
+      "Tablero Kanban con estados: Entrada → Diagnóstico → Reparación → Entrega",
+      "Filtrado por técnico autenticado",
+      "Columna especial para vehículos entregados hoy",
+      "Dashboard de métricas y rendimiento",
+      "Datos en tiempo real con Firestore onSnapshot",
+      "UI optimizada con Tailwind CSS",
+      "Navegación con React Router DOM"
     ]
   }
 ]

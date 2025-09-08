@@ -1,0 +1,148 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FBBF24;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiProcessGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#412991;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dashboardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F2C811;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FCD34D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="#F8FAFC" rx="12"/>
+  
+  <!-- Document input section -->
+  <rect x="30" y="40" width="100" height="120" fill="white" stroke="#E5E7EB" stroke-width="2" rx="8"/>
+  <text x="80" y="30" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#374151">Documentos</text>
+  
+  <!-- Invoice documents -->
+  <rect x="40" y="50" width="30" height="40" fill="#EF4444" rx="2"/>
+  <rect x="42" y="45" width="26" height="4" fill="#FCA5A5" rx="1"/>
+  <line x1="45" y1="60" x2="65" y2="60" stroke="white" stroke-width="1"/>
+  <line x1="45" y1="65" x2="60" y2="65" stroke="white" stroke-width="1"/>
+  <line x1="45" y1="70" x2="67" y2="70" stroke="white" stroke-width="1"/>
+  <line x1="45" y1="75" x2="55" y2="75" stroke="white" stroke-width="1"/>
+  <text x="55" y="85" font-family="Arial" font-size="6" text-anchor="middle" fill="white">PDF</text>
+  
+  <rect x="80" y="50" width="30" height="40" fill="#10B981" rx="2"/>
+  <rect x="82" y="45" width="26" height="4" fill="#6EE7B7" rx="1"/>
+  <line x1="85" y1="60" x2="105" y2="60" stroke="white" stroke-width="1"/>
+  <line x1="85" y1="65" x2="100" y2="65" stroke="white" stroke-width="1"/>
+  <line x1="85" y1="70" x2="107" y2="70" stroke="white" stroke-width="1"/>
+  <line x1="85" y1="75" x2="95" y2="75" stroke="white" stroke-width="1"/>
+  <text x="95" y="85" font-family="Arial" font-size="6" text-anchor="middle" fill="white">IMG</text>
+  
+  <rect x="40" y="100" width="30" height="40" fill="#3B82F6" rx="2"/>
+  <rect x="42" y="95" width="26" height="4" fill="#93C5FD" rx="1"/>
+  <line x1="45" y1="110" x2="65" y2="110" stroke="white" stroke-width="1"/>
+  <line x1="45" y1="115" x2="60" y2="115" stroke="white" stroke-width="1"/>
+  <line x1="45" y1="120" x2="67" y2="120" stroke="white" stroke-width="1"/>
+  <line x1="45" y1="125" x2="55" y2="125" stroke="white" stroke-width="1"/>
+  <text x="55" y="135" font-family="Arial" font-size="6" text-anchor="middle" fill="white">DOC</text>
+  
+  <rect x="80" y="100" width="30" height="40" fill="#8B5CF6" rx="2"/>
+  <rect x="82" y="95" width="26" height="4" fill="#C4B5FD" rx="1"/>
+  <line x1="85" y1="110" x2="105" y2="110" stroke="white" stroke-width="1"/>
+  <line x1="85" y1="115" x2="100" y2="115" stroke="white" stroke-width="1"/>
+  <line x1="85" y1="120" x2="107" y2="120" stroke="white" stroke-width="1"/>
+  <line x1="85" y1="125" x2="95" y2="125" stroke="white" stroke-width="1"/>
+  <text x="95" y="135" font-family="Arial" font-size="6" text-anchor="middle" fill="white">SCAN</text>
+  
+  <!-- OCR Process -->
+  <rect x="160" y="60" width="80" height="80" fill="white" stroke="#E5E7EB" stroke-width="2" rx="8"/>
+  <text x="200" y="50" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#374151">Procesamiento OCR</text>
+  
+  <!-- OCR Eye -->
+  <circle cx="200" cy="90" r="15" fill="#005571" opacity="0.8"/>
+  <circle cx="200" cy="90" r="10" fill="white"/>
+  <circle cx="200" cy="90" r="6" fill="#005571"/>
+  <circle cx="202" cy="88" r="2" fill="white"/>
+  
+  <!-- Scanning lines -->
+  <g opacity="0.6">
+    <line x1="170" y1="105" x2="230" y2="105" stroke="#005571" stroke-width="2"/>
+    <line x1="170" y1="110" x2="230" y2="110" stroke="#005571" stroke-width="1"/>
+    <line x1="170" y1="115" x2="230" y2="115" stroke="#005571" stroke-width="2"/>
+    <line x1="170" y1="120" x2="230" y2="120" stroke="#005571" stroke-width="1"/>
+  </g>
+  
+  <text x="200" y="130" font-family="Arial" font-size="8" text-anchor="middle" fill="#374151">Tesseract OCR</text>
+  
+  <!-- AI Processing -->
+  <rect x="270" y="40" width="100" height="120" fill="white" stroke="#E5E7EB" stroke-width="2" rx="8"/>
+  <text x="320" y="30" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#374151">IA Processing</text>
+  
+  <!-- OpenAI GPT-4 -->
+  <circle cx="320" cy="70" r="20" fill="url(#aiProcessGrad)"/>
+  <path d="M305 65 Q320 55 335 65 Q330 75 320 75 Q310 75 305 65" fill="white" opacity="0.9"/>
+  <circle cx="315" cy="68" r="2" fill="#1F2937"/>
+  <circle cx="325" cy="68" r="2" fill="#1F2937"/>
+  <path d="M310 78 Q320 85 330 78" stroke="#1F2937" stroke-width="1" fill="none"/>
+  
+  <text x="320" y="100" font-family="Arial" font-size="8" text-anchor="middle" fill="#374151">OpenAI GPT-4</text>
+  
+  <!-- Field extraction -->
+  <rect x="280" y="110" width="80" height="40" fill="#F3F4F6" rx="4"/>
+  <text x="320" y="120" font-family="Arial" font-size="7" text-anchor="middle" fill="#374151">Campos extraídos:</text>
+  <text x="285" y="130" font-family="Arial" font-size="6" fill="#374151">• Empresa</text>
+  <text x="285" y="138" font-family="Arial" font-size="6" fill="#374151">• Importe</text>
+  <text x="320" y="130" font-family="Arial" font-size="6" fill="#374151">• Fecha</text>
+  <text x="320" y="138" font-family="Arial" font-size="6" fill="#374151">• IVA</text>
+  
+  <!-- Data flow arrows -->
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280"/>
+      </marker>
+    </defs>
+    <path d="M130 100 Q145 100 160 100"/>
+    <path d="M240 100 Q255 100 270 100"/>
+  </g>
+  
+  <!-- Database storage -->
+  <rect x="50" y="180" width="80" height="30" fill="#003B57" rx="4"/>
+  <ellipse cx="90" cy="185" rx="25" ry="4" fill="#BFDBFE"/>
+  <ellipse cx="90" cy="190" rx="25" ry="4" fill="#BFDBFE"/>
+  <ellipse cx="90" cy="195" rx="25" ry="4" fill="#BFDBFE"/>
+  <text x="90" y="205" font-family="Arial" font-size="8" text-anchor="middle" fill="white">SQLite DB</text>
+  
+  <!-- Power BI Dashboard -->
+  <rect x="270" y="180" width="80" height="30" fill="url(#dashboardGrad)" rx="4"/>
+  <rect x="275" y="185" width="15" height="10" fill="white" rx="1"/>
+  <rect x="295" y="185" width="15" height="10" fill="white" rx="1"/>
+  <rect x="315" y="185" width="15" height="10" fill="white" rx="1"/>
+  <rect x="335" y="185" width="10" height="10" fill="white" rx="1"/>
+  
+  <!-- Chart elements -->
+  <rect x="277" y="192" width="2" height="5" fill="#F2C811"/>
+  <rect x="280" y="189" width="2" height="8" fill="#F2C811"/>
+  <rect x="283" y="191" width="2" height="6" fill="#F2C811"/>
+  
+  <circle cx="302" cy="190" r="2" fill="#F2C811"/>
+  <polyline points="297,192 302,188 307,190" stroke="#F2C811" stroke-width="1" fill="none"/>
+  
+  <text x="320" y="205" font-family="Arial" font-size="8" text-anchor="middle" fill="white">Power BI</text>
+  
+  <!-- Storage arrows -->
+  <g stroke="#6B7280" stroke-width="2" fill="none">
+    <path d="M320 160 Q200 170 90 180"/>
+    <path d="M320 160 Q320 170 320 180"/>
+  </g>
+  
+  <!-- Title and description -->
+  <text x="200" y="230" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#1F2937">FactuAI - Pipeline de Procesamiento</text>
+  <text x="200" y="245" font-family="Arial" font-size="12" text-anchor="middle" fill="#6B7280">OCR + IA para extracción automática de datos de facturas</text>
+  
+  <!-- Multi-language support -->
+  <g transform="translate(150, 170)">
+    <rect x="0" y="0" width="100" height="15" fill="#E5E7EB" rx="7"/>
+    <text x="50" y="10" font-family="Arial" font-size="8" text-anchor="middle" fill="#374151">🌍 ES | EN | FR | DE</text>
+  </g>
+</svg>
