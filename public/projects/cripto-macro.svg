@@ -1,0 +1,100 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con gradiente -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+  
+  <!-- Patrón de fondo con puntos -->
+  <defs>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#dots)"/>
+  
+  <!-- Gráfico de líneas de tendencia -->
+  <path d="M50 200 Q100 150 150 180 T250 120 T350 140" stroke="url(#chartGradient)" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M50 220 Q100 170 150 200 T250 140 T350 160" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="0.8"/>
+  
+  <!-- Puntos de datos -->
+  <circle cx="50" cy="200" r="4" fill="#10b981" filter="url(#glow)"/>
+  <circle cx="100" cy="150" r="4" fill="#f59e0b" filter="url(#glow)"/>
+  <circle cx="150" cy="180" r="4" fill="#ef4444" filter="url(#glow)"/>
+  <circle cx="200" cy="160" r="4" fill="#8b5cf6" filter="url(#glow)"/>
+  <circle cx="250" cy="120" r="4" fill="#06b6d4" filter="url(#glow)"/>
+  <circle cx="300" cy="130" r="4" fill="#84cc16" filter="url(#glow)"/>
+  <circle cx="350" cy="140" r="4" fill="#f97316" filter="url(#glow)"/>
+  
+  <!-- Iconos de criptomonedas -->
+  <g transform="translate(80, 50)">
+    <!-- Bitcoin -->
+    <circle cx="0" cy="0" r="25" fill="#f7931a" filter="url(#glow)"/>
+    <text x="0" y="8" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">₿</text>
+  </g>
+  
+  <g transform="translate(200, 60)">
+    <!-- Ethereum -->
+    <circle cx="0" cy="0" r="25" fill="#627eea" filter="url(#glow)"/>
+    <path d="M-15,-10 L0,10 L15,-10 L10,-15 L-10,-15 Z" fill="white"/>
+  </g>
+  
+  <g transform="translate(320, 55)">
+    <!-- Gráfico de barras -->
+    <rect x="-8" y="-15" width="6" height="30" fill="#10b981" filter="url(#glow)"/>
+    <rect x="-2" y="-10" width="6" height="20" fill="#f59e0b" filter="url(#glow)"/>
+    <rect x="4" y="-20" width="6" height="40" fill="#ef4444" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Iconos de macroeconomía -->
+  <g transform="translate(50, 80)">
+    <!-- Gráfico de crecimiento -->
+    <rect x="-15" y="-8" width="30" height="16" rx="4" fill="#1e40af" opacity="0.8"/>
+    <path d="M-10,-5 L-5,0 L0,-3 L5,2 L10,-1" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+  
+  <g transform="translate(150, 85)">
+    <!-- Indicador de inflación -->
+    <circle cx="0" cy="0" r="15" fill="#dc2626" opacity="0.8"/>
+    <text x="0" y="5" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">%</text>
+  </g>
+  
+  <g transform="translate(250, 80)">
+    <!-- Indicador de PIB -->
+    <rect x="-12" y="-12" width="24" height="24" rx="4" fill="#059669" opacity="0.8"/>
+    <text x="0" y="5" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">PIB</text>
+  </g>
+  
+  <!-- Título del proyecto -->
+  <text x="200" y="250" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Informe Cripto-Macro
+  </text>
+  <text x="200" y="270" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" opacity="0.9">
+    Power BI Dashboard
+  </text>
+  
+  <!-- Elementos decorativos -->
+  <g opacity="0.3">
+    <circle cx="350" cy="200" r="3" fill="white"/>
+    <circle cx="360" cy="210" r="2" fill="white"/>
+    <circle cx="340" cy="190" r="2" fill="white"/>
+    <circle cx="355" cy="185" r="1.5" fill="white"/>
+  </g>
+</svg>
