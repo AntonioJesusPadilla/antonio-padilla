@@ -1,4 +1,4 @@
-# 👋 ¡Hola! Soy Antonio Jesús Padilla
+# 👋 ¡Hola! Soy Antonio J. Padilla
 
 Soy desarrollador full-stack especializado en interfaces modernas, automatización inteligente y soluciones de IA. Me apasiona crear aplicaciones completas que combinan frontend moderno (Next.js, React, Tailwind) con backends robustos (FastAPI, Python) y automatización avanzada (n8n, Docker).
 

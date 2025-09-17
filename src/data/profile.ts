@@ -15,7 +15,7 @@ export interface ProfileData {
 }
 
 export const profile: ProfileData = {
-  name: 'Antonio Jesús Padilla',
+  name: 'Antonio J. Padilla',
   title: 'Desarrollador Full Stack & Especialista en IA',
   description: 'Desarrollador full-stack especializado en interfaces modernas, automatización inteligente y soluciones de IA. Me apasiona crear aplicaciones completas que combinan frontend moderno con backends robustos y sistemas de IA.',
   image: '/antonio-avatar.svg',

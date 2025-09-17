@@ -51,7 +51,7 @@ const featuredProjects = [
 
 <BaseLayout title={`${profile.name} | Portfolio`}>
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-4 -mt-20 pt-20">
+  <section class="min-h-[70vh] flex items-center justify-center bg-white dark:bg-gray-900 px-4 -mt-20 pt-20">
     <div class="container max-w-4xl mx-auto text-center">
       <div class="mb-8">
         <img 
@@ -145,6 +145,52 @@ const featuredProjects = [
     setTimeout(animateRoles, 1000);
   </script>
 
+  <!-- About Section -->
+  <section id="about" class="pt-6 md:pt-8 pb-16 bg-white dark:bg-gray-900">
+    <div class="container max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900 dark:text-white">Acerca de Mí</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+        <!-- Icono / Avatar -->
+        <div class="md:col-span-1 flex md:justify-center">
+          <div class="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 text-white flex items-center justify-center text-3xl md:text-4xl shadow-lg">
+            🚀
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="md:col-span-4">
+          <div class="space-y-5 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+            <p>
+              Soy un <span class="font-semibold text-gray-900 dark:text-white">desarrollador full‑stack especializado en interfaces modernas, automatización inteligente y soluciones de IA</span>. 
+              Me apasiona crear aplicaciones completas que combinan frontend moderno 
+              <span class="font-medium">Next.js, React, Tailwind</span> con backends robustos 
+              <span class="font-medium">FastAPI, Python</span> y automatización avanzada 
+              <span class="font-medium">n8n, Docker</span>.
+            </p>
+
+            <p>
+              Con experiencia en <span class="font-medium">asistentes de IA, interfaces de chat responsive y sistemas de automatización</span>, 
+              me especializo en crear soluciones escalables que integran inteligencia artificial con experiencias de usuario excepcionales.
+            </p>
+
+            <p>
+              Mi enfoque se centra en <span class="font-medium">transformar ideas complejas en soluciones elegantes mediante código limpio y tecnologías innovadoras</span>. 
+              Siempre busco nuevos desafíos que me permitan explorar las fronteras de la tecnología y la inteligencia artificial.
+            </p>
+          </div>
+      </div>
+     
+    </div>
+    
+    <!-- Cita -->
+    <div class="mt-6">
+      <div class="p-5 md:p-6 rounded-xl border border-primary-200 dark:border-primary-800 bg-primary-50/60 dark:bg-primary-900/10 text-primary-900 dark:text-primary-200 text-sm md:text-base italic text-center">
+        "Transformando ideas complejas en soluciones elegantes mediante código limpio y tecnologías innovadoras."
+      </div>
+    </div>
+  </section>
+
   <!-- Experience Section -->
   <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
     <div class="container max-w-4xl mx-auto">
@@ -233,7 +279,7 @@ const featuredProjects = [
                 Enfoque en experiencia de usuario y arquitecturas escalables.
               </p>
               
-        <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-2">
                 <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">React</span>
                 <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Node.js</span>
                 <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">JavaScript</span>
@@ -246,139 +292,100 @@ const featuredProjects = [
     </div>
   </section>
 
-  <!-- Technologies Section -->
+    <!-- Technologies Section -->
   <section id="technologies" class="py-20 bg-white dark:bg-gray-900">
     <div class="container max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-gray-900 dark:text-white">Tecnologías</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-gray-900 dark:text-white">Stack Tecnológico</h2>
       
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
-        <!-- Frontend Technologies -->
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-red-400 to-red-600 rounded-lg text-white font-bold text-xl shadow-lg">
-            St
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <!-- Frontend Moderno -->
+        <div class="group p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-cyan-600 text-white text-2xl">⚛️</div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Frontend Moderno</h3>
           </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Streamlit</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Next.js & React</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">TypeScript</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Tailwind CSS</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Astro</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Responsive Design</span>
+          </div>
         </div>
 
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg text-white font-bold text-lg shadow-lg">
-            ⚛️
+        <!-- Backend & APIs -->
+        <div class="group p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 text-white text-2xl">🐍</div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Backend & APIs</h3>
           </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">React</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Python & FastAPI</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Streamlit</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">RESTful APIs</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">JWT & bcrypt</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Sistema RBAC</span>
+          </div>
         </div>
 
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-black to-gray-800 rounded-lg text-white font-bold text-sm shadow-lg">
-            Next
+        <!-- Inteligencia Artificial -->
+        <div class="group p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-purple-700 text-white text-2xl">🤖</div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Inteligencia Artificial</h3>
           </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Next.js</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Groq Llama 3.3 70B</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">OpenAI GPT-4</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Procesamiento de Lenguaje Natural</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">OCR & Tesseract</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Sistemas de Chat IA</span>
+          </div>
         </div>
 
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg text-white font-bold text-sm shadow-lg">
-            TS
+        <!-- Bases de Datos & Cloud -->
+        <div class="group p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-gray-600 to-gray-800 text-white text-2xl">🗄️</div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Bases de Datos & Cloud</h3>
           </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">TypeScript</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">PostgreSQL</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">SQLite</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Firebase</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Vercel</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Streamlit Cloud</span>
+          </div>
         </div>
 
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-orange-400 to-red-500 rounded-lg text-white font-bold text-sm shadow-lg">
-            🎨
+        <!-- Automatización & DevOps -->
+        <div class="group p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-500 to-teal-700 text-white text-2xl">🔄</div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Automatización & DevOps</h3>
           </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Tailwind CSS</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">n8n Workflows</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Docker</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Git & GitHub</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">CI/CD Pipelines</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Sistemas de Fallback</span>
+          </div>
         </div>
 
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg text-white font-bold text-sm shadow-lg">
-            🚀
+        <!-- Análisis & Visualización -->
+        <div class="group p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-600 text-white text-2xl">📊</div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Análisis & Visualización</h3>
           </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Astro</span>
-        </div>
-
-        <!-- Backend Technologies -->
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg text-white font-bold text-sm shadow-lg">
-            🐍
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Power BI & DAX</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Pandas</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Folium (Mapas)</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Análisis Geoespacial</span>
+            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">Dashboards Interactivos</span>
           </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Python</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-teal-400 to-teal-600 rounded-lg text-white font-bold text-xs shadow-lg">
-            Fast
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">FastAPI</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-green-400 to-green-600 rounded-lg text-white font-bold text-sm shadow-lg">
-            📊
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Node.js</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg text-white font-bold text-sm shadow-lg">
-            🛡️
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">JWT</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg text-white font-bold text-sm shadow-lg">
-            🗄️
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">PostgreSQL</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg text-white font-bold text-sm shadow-lg">
-            🐳
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Docker</span>
-        </div>
-
-        <!-- AI & Data Technologies -->
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-orange-500 to-red-600 rounded-lg text-white font-bold text-xs shadow-lg">
-            Groq
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Groq AI</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg text-white font-bold text-sm shadow-lg">
-            🤖
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">OpenAI</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-green-500 to-green-700 rounded-lg text-white font-bold text-sm shadow-lg">
-            🗺️
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Folium</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg text-white font-bold text-sm shadow-lg">
-            🐼
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Pandas</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-pink-500 to-pink-700 rounded-lg text-white font-bold text-sm shadow-lg">
-            🔄
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">n8n</span>
-        </div>
-
-        <div class="group flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg text-white font-bold text-sm shadow-lg">
-            📊
-          </div>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">Power BI</span>
         </div>
       </div>
     </div>
